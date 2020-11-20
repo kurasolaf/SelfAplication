@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SelfAplication.Models;
 
 namespace SelfAplication.Migrations
 {
     [DbContext(typeof(SelfAplicationContext))]
-    partial class SelfAplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20201120233738_AddedGoldInCharater")]
+    partial class AddedGoldInCharater
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,9 +62,6 @@ namespace SelfAplication.Migrations
 
                     b.Property<string>("BasicRace")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Complete")
-                        .HasColumnType("bit");
 
                     b.Property<int>("Gold")
                         .HasColumnType("int");
