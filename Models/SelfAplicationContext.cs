@@ -12,7 +12,7 @@ namespace SelfAplication.Models
         public SelfAplicationContext([NotNullAttribute] DbContextOptions options) : base(options)
         {
         }
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<Character> Characters { get; set; }
 
 
     }

@@ -9,8 +9,8 @@ using SelfAplication.Models;
 namespace SelfAplication.Migrations
 {
     [DbContext(typeof(SelfAplicationContext))]
-    [Migration("20201108173328_Init")]
-    partial class Init
+    [Migration("20201120222833_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,7 +20,7 @@ namespace SelfAplication.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("SelfAplication.Models.Order", b =>
+            modelBuilder.Entity("SelfAplication.Models.Character", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -38,7 +38,7 @@ namespace SelfAplication.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Characters");
                 });
 #pragma warning restore 612, 618
         }
