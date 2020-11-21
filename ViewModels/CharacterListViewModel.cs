@@ -7,5 +7,6 @@ namespace SelfAplication.ViewModels
 {
     public class CharacterListViewModel
     {
+        public IEnumerable<CharacterListItemViewModel> Characters { get; set; }
     }
 }
