@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace SelfAplication.Models
 {
+    /* podstawowa klasa character gdzie definiujemy KLUCZ [key]po ktorym w bazie danych identyfikuja obiekty
+     TO DO na potem: losowe generowanie statystyk, edit statystyk, podstawianie danych do innych zmiennych
+     na podstawie wygenerowanych statystyk
+     */
     public class Character
     {
        
@@ -23,6 +27,7 @@ namespace SelfAplication.Models
         #region Advanced MetaData
         public string AdvancedCharacterDesc { get; set; }
         public int AdvancedWill { get; set; }
+        public int AdvancedBaseAtk { get; set; }
         public int AdvancedMeleAtk { get; set; }
         public int AdvancedRangedAtk { get; set; }
         public int AdvancedDodge { get; set; }

@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SelfAplication.Models
 {
+    //o co tu kaman? cos z baza danych o co chodzi w skladni?
     public class SelfAplicationContext : DbContext
     {
         public SelfAplicationContext([NotNullAttribute] DbContextOptions options) : base(options)

@@ -12,14 +12,14 @@ namespace SelfAplication.Services
     {
         private SelfAplicationContext _context;
 
-
+        //??
         public CharacterListService(SelfAplicationContext context)
         {
 
             _context = context;
 
         }
-
+        // o co kaman, getallopen - pobiera wszystkie niezakonczone  characters (te ktore są instacją klasy character)
         public CharacterListViewModel GetAllOpen()
         {
             var characters = _context.Characters.Where(x => !x.Complete).Select(x => new CharacterListItemViewModel
@@ -32,6 +32,7 @@ namespace SelfAplication.Services
    
                 AdvancedCharacterDesc = x.AdvancedCharacterDesc, 
                 AdvancedWill = x.AdvancedWill,
+                AdvancedBaseAtk = x.AdvancedBaseAtk,
                 AdvancedMeleAtk = x.AdvancedMeleAtk,
                 AdvancedRangedAtk = x.AdvancedRangedAtk,
                 AdvancedDodge = x.AdvancedDodge,
@@ -50,7 +51,7 @@ namespace SelfAplication.Services
                 Inventory = x.Inventory,
                 Gold = x.Gold
              });
-
+        // czemu tworzy sie "o co kaman"
             var vm = new CharacterListViewModel
             {
                 Characters = characters
@@ -59,12 +60,63 @@ namespace SelfAplication.Services
 
             return vm;
 
-            
 
+         }
 
+        //wymaga wprowadzenia wszystkich zmiennych tożsamych z character
+        public void Add( string basicname, int basiclvl, string basicrace, string basicclass,
+        string advancedcharacterdesc, int advancedwill, int advancedbaseatk, int advancedmeleatk, int advancedrangedatk,
+        int advanceddodge, int abilitiespoints, int statstrenght, int statinteligence, int statdexterity, int statwisdom,
+        int statconstitution, int statcharisma, int abilityconcetration, int abilityalchemy, string inventory, int gold)
+        {
+        // tworzenie instancji klasy character, gdzie przypisano do zmiennych z class character zmienne w instanji character
+            var character = new Character
+            {
+                BasicName = basicname,
+                BasicLvl = basiclvl,
+                BasicRace = basicrace,
+                BasicClass = basicclass,
 
+                AdvancedCharacterDesc = advancedcharacterdesc,
+                AdvancedWill = advancedwill,
+                AdvancedBaseAtk = advancedbaseatk,
+                AdvancedMeleAtk = advancedmeleatk,
+                AdvancedRangedAtk = advancedrangedatk,
+                AdvancedDodge = advanceddodge,
+                AbilitiesPoints = abilitiespoints,
+
+                StatStrenght = statstrenght,
+                StatInteligence = statinteligence,
+                StatDexterity = statdexterity,
+                StatWisdom = statwisdom,
+                StatConstitution = statconstitution,
+                StatCharisma = statcharisma,
+
+                AbilityConcetration = abilityconcetration,
+                AbilityAlchemy = abilityalchemy,
+
+                Inventory = inventory,
+                Gold = gold,
+                Complete = false
+
+            };
+
+            // najpierw czemu add? potem rozumiem ze zapisuje zmiany/ gdzie?
+            _context.Characters.Add(character);
+            _context.SaveChanges();
 
         }
+        //klasa ktora konczy co? po zakonczeniu ustawia w instancji klasy character.metodaComplete wartość na true i zapisuje zmiany
+        public void FinishCharacter(int id)
+        {
+            var character = _context.Characters.Find(id);
+            character.Complete = true;
+            _context.SaveChanges();
+
+        }
+
+
+
 
 
     }
