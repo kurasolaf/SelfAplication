@@ -19,7 +19,7 @@ namespace SelfAplication.Services
             _context = context;
 
         }
-        // o co kaman, getallopen - pobiera wszystkie niezakonczone  characters (te ktore są instacją klasy character)
+        // o co kaman, getallopen - pobiera wszystkie niezakonczone  characters (te ktore są instacją klasy character). logika biznesowa
         public CharacterListViewModel GetAllOpen()
         {
             var characters = _context.Characters.Where(x => !x.Complete).Select(x => new CharacterListItemViewModel
@@ -63,7 +63,7 @@ namespace SelfAplication.Services
 
          }
 
-        //wymaga wprowadzenia wszystkich zmiennych tożsamych z character
+        //wymaga wprowadzenia wszystkich zmiennych tożsamych z character. kolejnosc ma znaczenie. lepie zastąpić wzorem z NewCharacterViewModel wstzyknietym
         public void Add( string basicname, int basiclvl, string basicrace, string basicclass,
         string advancedcharacterdesc, int advancedwill, int advancedbaseatk, int advancedmeleatk, int advancedrangedatk,
         int advanceddodge, int abilitiespoints, int statstrenght, int statinteligence, int statdexterity, int statwisdom,
@@ -72,6 +72,7 @@ namespace SelfAplication.Services
         // tworzenie instancji klasy character, gdzie przypisano do zmiennych z class character zmienne w instanji character
             var character = new Character
             {
+               
                 BasicName = basicname,
                 BasicLvl = basiclvl,
                 BasicRace = basicrace,

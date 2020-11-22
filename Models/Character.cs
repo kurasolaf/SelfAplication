@@ -10,9 +10,10 @@ namespace SelfAplication.Models
      TO DO na potem: losowe generowanie statystyk, edit statystyk, podstawianie danych do innych zmiennych
      na podstawie wygenerowanych statystyk
      */
+    
     public class Character
     {
-       
+
         #region Basic MetaData
         [Key]
         public int Id { get; set; }
@@ -37,7 +38,7 @@ namespace SelfAplication.Models
 
         #region Statistic MetaData
         public int StatStrenght { get; set; }
-        public int StatInteligence { get; set; }
+        public int StatInteligence { get; set; } 
         public int StatDexterity { get; set; }
         public int StatWisdom { get; set; }
         public int StatConstitution { get; set; }
