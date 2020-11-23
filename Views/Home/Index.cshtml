@@ -1,8 +1,39 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model SelfAplication.ViewModels.CharacterListViewModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@foreach(var character in Model.Characters)
+{
+
+<div>
+
+    <h3>@character.BasicName</h3>
+    <p>@character.BasicLvl</p>
+    <p>@character.BasicRace</p>
+    <p>@character.BasicClass</p>
+    <br />
+    <p>@character.AdvancedCharacterDesc</p>
+    <p>@character.AdvancedWill</p>
+    <p>@character.AdvancedBaseAtk</p>
+    <p>@character.AdvancedMeleAtk</p>
+    <p>@character.AdvancedRangedAtk</p>
+    <p>@character.AdvancedDodge</p>
+    <p>@character.AbilitiesPoints</p>
+    <br />
+    <p>@character.StatStrenght</p>
+    <p>@character.StatInteligence</p>
+    <p>@character.StatDexterity</p>
+    <p>@character.StatWisdom</p>
+    <p>@character.StatConstitution</p>
+    <p>@character.StatCharisma</p>
+    <br />
+    <p>@character.AbilityConcetration</p>
+    <p>@character.AbilityAlchemy</p>
+    <br />
+    <p>@character.Inventory</p>
+    <p>@character.Gold</p>
+     <a asp-controller="Home" asp-action="Finish">Zakończ</a>
+
+
 </div>
+
+
+}

@@ -69,10 +69,10 @@ namespace SelfAplication.Services
         int advanceddodge, int abilitiespoints, int statstrenght, int statinteligence, int statdexterity, int statwisdom,
         int statconstitution, int statcharisma, int abilityconcetration, int abilityalchemy, string inventory, int gold)
         {
-        // tworzenie instancji klasy character, gdzie przypisano do zmiennych z class character zmienne w instanji character
+            // tworzenie instancji klasy character, gdzie przypisano do zmiennych z class character zmienne w instanji character
             var character = new Character
             {
-               
+
                 BasicName = basicname,
                 BasicLvl = basiclvl,
                 BasicRace = basicrace,
