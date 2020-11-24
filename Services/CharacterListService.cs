@@ -63,6 +63,11 @@ namespace SelfAplication.Services
 
          }
 
+        internal void Add(string basicName, int basicLvl, string basicRace, string advancedCharacterDesc, int advancedWill, int advancedBaseAtk, int advancedMeleAtk, int advancedRangedAtk, int advancedDodge, int abilitiesPoints, int statStrenght, int statInteligence, int statDexterity, int statWisdom, int statConstitution, int statCharisma, int abilityConcetration, int abilityAlchemy, string inventory, int gold)
+        {
+            throw new NotImplementedException();
+        }
+
         //wymaga wprowadzenia wszystkich zmiennych tożsamych z character. kolejnosc ma znaczenie. lepie zastąpić wzorem z NewCharacterViewModel wstzyknietym
         public void Add( string basicname, int basiclvl, string basicrace, string basicclass,
         string advancedcharacterdesc, int advancedwill, int advancedbaseatk, int advancedmeleatk, int advancedrangedatk,
