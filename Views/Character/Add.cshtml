@@ -1,0 +1,55 @@
+﻿@model SelfAplication.ViewModels.NewCharacterViewModel
+
+    <form asp-action="Add" method="post">
+        <div class="form-group">
+            <label asp-for="BasicName" class="control-label">Imię postaci</label>
+            <input asp-for="BasicName" class="form-control" />
+            <span asp-validation-for="BasicName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="BasicLvl" class="control-label">LVL</label>
+            <input asp-for="BasicLvl" class="form-control" />
+            <span asp-validation-for="BasicLvl" class="text-danger"></span>
+        </div>
+
+
+        string BasicName { get; set; }
+        int BasicLvl { get; set; }
+        string BasicRace { get; set; }
+        string BasicClass { get; set; }
+        string AdvancedCharacterDesc { get; set; }
+        int AdvancedWill { get; set; }
+        int AdvancedBaseAtk { get; set; }
+        int AdvancedMeleAtk { get; set; }
+        int AdvancedRangedAtk { get; set; }
+        int AdvancedDodge { get; set; }
+        int AbilitiesPoints { get; set; }
+
+
+
+        int StatStrenght { get; set; }
+        int StatInteligence { get; set; }
+        int StatDexterity { get; set; }
+        int StatWisdom { get; set; }
+        int StatConstitution { get; set; }
+        int StatCharisma { get; set; }
+
+        int AbilityConcetration { get; set; }
+        int AbilityAlchemy { get; set; }
+        string Inventory { get; set; }
+        int Gold { get; set; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </form>

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SelfAplication.Models;
+using SelfAplication.Services;
 
 namespace SelfAplication
 {
@@ -28,6 +29,8 @@ namespace SelfAplication
             services.AddControllersWithViews();
             services.AddDbContext<SelfAplicationContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Default")));
+            //³¹czymy services utworzonych obiektów tutaj z folderu services
+            services.AddTransient<CharacterListService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
