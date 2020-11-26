@@ -117,6 +117,7 @@ namespace SelfAplication.Services
         {
             var character = _context.Characters.Find(id);
             character.Complete = true;
+            _context.Characters.Update(character);
             _context.SaveChanges();
 
         }
