@@ -1,48 +1,123 @@
 ﻿@model SelfAplication.ViewModels.NewCharacterViewModel
 
-    <form asp-action="Add" method="post">
-        <div class="form-group">
-            <label asp-for="BasicName" class="control-label">Imię postaci</label>
-            <input asp-for="BasicName" class="form-control" />
-            <span asp-validation-for="BasicName" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="BasicLvl" class="control-label">LVL</label>
-            <input asp-for="BasicLvl" class="form-control" />
-            <span asp-validation-for="BasicLvl" class="text-danger"></span>
-        </div>
-        <button class="btn btn-block btn-primary" type="submit">Stwórz postać</button>
+<form asp-action="Add" method="post">
+    <p>DANE PODSTAWOWE</p>
+    <div class="form-group">
+        <label asp-for="BasicName" class="control-label">Imię postaci</label>
+        <input asp-for="BasicName" class="form-control" />
+        <span asp-validation-for="BasicName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BasicLvl" class="control-label">LVL</label>
+        <input asp-for="BasicLvl" class="form-control" />
+        <span asp-validation-for="BasicLvl" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BasicRace" class="control-label">Rasa postaci</label>
+        <input asp-for="BasicRace" class="form-control" />
+        <span asp-validation-for="BasicRace" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BasicClass" class="control-label">Klasa postaci</label>
+        <input asp-for="BasicClass" class="form-control" />
+        <span asp-validation-for="BasicClass" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AdvancedCharacterDesc" class="control-label">Opis postaci, historia, pochodzenie</label>
+        <input asp-for="AdvancedCharacterDesc" class="form-control" />
+        <span asp-validation-for="AdvancedCharacterDesc" class="text-danger"></span>
+    </div>
+    <p>STATYSTYKI ZAAWANSOWANE</p>
+    <div class="form-group">
+        <label asp-for="AdvancedWill" class="control-label">Siła woli</label>
+        <input asp-for="AdvancedWill" class="form-control" />
+        <span asp-validation-for="AdvancedWill" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AdvancedBaseAtk" class="control-label">Bazowy atak</label>
+        <input asp-for="AdvancedBaseAtk" class="form-control" />
+        <span asp-validation-for="AdvancedBaseAtk" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AdvancedMeleAtk" class="control-label">Atak w zwarciu</label>
+        <input asp-for="AdvancedMeleAtk" class="form-control" />
+        <span asp-validation-for="AdvancedMeleAtk" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AdvancedRangedAtk" class="control-label">Atak dystansowy</label>
+        <input asp-for="AdvancedRangedAtk" class="form-control" />
+        <span asp-validation-for="AdvancedRangedAtk" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AdvancedDodge" class="control-label">Uniki</label>
+        <input asp-for="AdvancedDodge" class="form-control" />
+        <span asp-validation-for="AdvancedDodge" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AbilitiesPoints" class="control-label">Punkty umiejętności</label>
+        <input asp-for="AbilitiesPoints" class="form-control" />
+        <span asp-validation-for="AbilitiesPoints" class="text-danger"></span>
+    </div>
+    <p>STATYSTYKI PODSTAWOWE</p>
+    <div class="form-group">
+        <label asp-for="StatStrenght" class="control-label">Siła</label>
+        <input asp-for="StatStrenght" class="form-control" />
+        <span asp-validation-for="StatStrenght" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="StatInteligence" class="control-label">Inteligencja</label>
+        <input asp-for="StatInteligence" class="form-control" />
+        <span asp-validation-for="StatInteligence" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="StatDexterity" class="control-label">Zręczność</label>
+        <input asp-for="StatDexterity" class="form-control" />
+        <span asp-validation-for="StatDexterity" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="StatWisdom" class="control-label">Mądrość</label>
+        <input asp-for="StatWisdom" class="form-control" />
+        <span asp-validation-for="StatWisdom" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="StatConstitution" class="control-label">Budowa</label>
+        <input asp-for="StatConstitution" class="form-control" />
+        <span asp-validation-for="StatConstitution" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="StatCharisma" class="control-label">Charyzma</label>
+        <input asp-for="StatCharisma" class="form-control" />
+        <span asp-validation-for="StatCharisma" class="text-danger"></span>
+    </div>
+    <p>UMIEJĘTNOŚCI</p>
+    <div class="form-group">
+        <label asp-for="AbilityConcetration" class="control-label">umj. Koncentracja</label>
+        <input asp-for="AbilityConcetration" class="form-control" />
+        <span asp-validation-for="AbilityConcetration" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AbilityAlchemy" class="control-label">umj. Alchemia</label>
+        <input asp-for="AbilityAlchemy" class="form-control" />
+        <span asp-validation-for="AbilityAlchemy" class="text-danger"></span>
+    </div>
+    <p>INNE</p>
+    <div class="form-group">
+        <label asp-for="Inventory" class="control-label">Plecak</label>
+        <input asp-for="Inventory" class="form-control" />
+        <span asp-validation-for="Inventory" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Gold" class="control-label">Złoto</label>
+        <input asp-for="Gold" class="form-control" />
+        <span asp-validation-for="Gold" class="text-danger"></span>
+    </div>
+    <br />
+    <button class="btn btn-block btn-primary" type="submit">Stwórz postać</button>
+
+    <br />
+    <h3>POLA DO DODANIA</h3>
 
 
-        <br />
-        <h3>POLA DO DODANIA</h3>
-
-
-        string BasicName, 
-        int BasicLvl,
-        string BasicRace, 
-        string BasicClass, 
-        string AdvancedCharacterDesc, 
-        int AdvancedWill, 
-        int AdvancedBaseAtk,
-        int AdvancedMeleAtk, 
-        int AdvancedRangedAtk, 
-        int AdvancedDodge, 
-        int AbilitiesPoints ,
-
-
-
-        int StatStrenght, 
-        int StatInteligence, 
-        int StatDexterity, 
-        int StatWisdom, 
-        int StatConstitution ,
-        int StatCharisma, 
-
-        int AbilityConcetration, 
-        int AbilityAlchemy, 
-        string Inventory, 
-        int Gold, 
 
 
 
@@ -57,4 +132,4 @@
 
 
 
-    </form>
+</form>
