@@ -3,35 +3,48 @@
 @foreach(var character in Model.Characters)
 {
 
-<div>
-    
-    <h3>@character.BasicName</h3>
-    <p>@character.BasicLvl</p>
-    <p>@character.BasicRace</p>
-    <p>@character.BasicClass</p>
-    <br />
-    <p>@character.AdvancedCharacterDesc</p>
-    <p>@character.AdvancedWill</p>
-    <p>@character.AdvancedBaseAtk</p>
-    <p>@character.AdvancedMeleAtk</p>
-    <p>@character.AdvancedRangedAtk</p>
-    <p>@character.AdvancedDodge</p>
-    <p>@character.AbilitiesPoints</p>
-    <br />
-    <p>@character.StatStrenght</p>
-    <p>@character.StatInteligence</p>
-    <p>@character.StatDexterity</p>
-    <p>@character.StatWisdom</p>
-    <p>@character.StatConstitution</p>
-    <p>@character.StatCharisma</p>
-    <br />
-    <p>@character.AbilityConcetration</p>
-    <p>@character.AbilityAlchemy</p>
-    <br />
-    <p>@character.Inventory</p>
-    <p>@character.Gold</p>
-     <a asp-controller="Home" asp-action="Finish" asp-route-id="@character.Id">Zakończ</a>
+<div id="container">
+    <div id="logo">
+        <h3>Postać</h3>
+    </div>
+     <div id="nav">
+        <h1>@character.BasicName LVL:@character.BasicLvl</h1>
+     </div>
+     <div id="content">
+        
+        <p>POZIOM: @character.BasicLvl</p>
+        <p>RASA:   @character.BasicRace</p>
+        <p>KLASA:  @character.BasicClass</p>
+        <p>OPIS oraz HISTORIA POSTACI:</p>
+        <br />
+        @character.AdvancedCharacterDesc
+        <br />
+        <p>WOLA: @character.AdvancedWill</p>
+        <p>BAZOWY ATAK: + @character.AdvancedBaseAtk</p>
+        <p>W ZWARCIU: + @character.AdvancedMeleAtk</p>
+        <p>NA DYSTANS: + @character.AdvancedRangedAtk</p>
+        <p>UNIKI: @character.AdvancedDodge</p>
+        <p>Punkty Umiejętności: @character.AbilitiesPoints</p>
 
+        <p>SIŁA: @character.StatStrenght</p>
+        <p>INTELIGENCJA: @character.StatInteligence</p>
+        <p>ZRĘCZNOŚĆ: @character.StatDexterity</p>
+        <p>MĄDROŚĆ: @character.StatWisdom</p>
+        <p>BUDOWA: @character.StatConstitution</p>
+        <p>CHARYZMA: @character.StatCharisma</p>
+
+        <p>umj. Kontenctracja: @character.AbilityConcetration</p>
+        <p>umj. Alchemia: @character.AbilityAlchemy</p>
+        <br />
+        <p>ZAWARTOŚĆ PLECAKA:</p>
+        <p>@character.Inventory</p>
+
+        <p>ZŁOTO: @character.Gold</p>
+        <a asp-controller="Home" asp-action="Finish" asp-route-id="@character.Id">Zakończ</a>
+    </div>
+
+    <div id="side"> COŚ PO PRAWEJ STRONIE </div>
+    <div id="footer"> COŚ NA DOLE STRONY-FOOTER </div>
 
 </div>
 
