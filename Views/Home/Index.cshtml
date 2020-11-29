@@ -7,6 +7,7 @@
     <div id="logo">
         <h3>Postać</h3>
     </div>
+
      <div id="nav">
         <h1>@character.BasicName LVL:@character.BasicLvl</h1>
      </div>
@@ -40,7 +41,7 @@
         <p>@character.Inventory</p>
 
         <p>ZŁOTO: @character.Gold</p>
-        <a asp-controller="Home" asp-action="Finish" asp-route-id="@character.Id">Zakończ</a>
+        <a asp-controller="Home" asp-action="Finish" asp-route-id="@character.Id">Usuń postać</a>
     </div>
 
     <div id="side"> COŚ PO PRAWEJ STRONIE </div>

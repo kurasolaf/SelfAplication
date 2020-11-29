@@ -8,6 +8,7 @@ using SelfAplication.ViewModels;
 
 namespace SelfAplication.Controllers
 {
+    [Route("[controller]")]
     public class CharacterController : Controller
     {
         private CharacterListService _characterListService;
@@ -16,13 +17,14 @@ namespace SelfAplication.Controllers
             _characterListService = characterListService;
         }
 
-       [HttpGet]
-       public IActionResult Add()
+       [HttpGet("Add")]
+       public IActionResult GetAddPage()
         {
             return View();
 
         }
 
+       [HttpPost]
         public IActionResult Add(NewCharacterViewModel data)
         {
             if (!ModelState.IsValid)

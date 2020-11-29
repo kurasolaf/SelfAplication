@@ -13,6 +13,10 @@ namespace SelfAplication.Models
         public SelfAplicationContext([NotNullAttribute] DbContextOptions options) : base(options)
         {
         }
+
+
+        // tu podpinam klasy "bazowe" 
+
         public DbSet<Character> Characters { get; set; }
 
 

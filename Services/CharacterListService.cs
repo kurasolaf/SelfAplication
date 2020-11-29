@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-
+// klasa bazowa/aplikacjakontks/ service
 namespace SelfAplication.Services
 {
     public class CharacterListService
@@ -19,6 +19,8 @@ namespace SelfAplication.Services
             _context = context;
 
         }
+
+
         // o co kaman, getallopen - pobiera wszystkie niezakonczone  characters (te ktore są instacją klasy character). logika biznesowa
         public CharacterListViewModel GetAllOpen()
         {
@@ -51,22 +53,17 @@ namespace SelfAplication.Services
                 Inventory = x.Inventory,
                 Gold = x.Gold
              });
+
+
         // czemu tworzy sie "o co kaman"
-            var vm = new CharacterListViewModel
+            return new CharacterListViewModel
             {
                 Characters = characters
 
             };
 
-            return vm;
-
-
          }
 
-        internal void Add(string basicName, int basicLvl, string basicRace, string advancedCharacterDesc, int advancedWill, int advancedBaseAtk, int advancedMeleAtk, int advancedRangedAtk, int advancedDodge, int abilitiesPoints, int statStrenght, int statInteligence, int statDexterity, int statWisdom, int statConstitution, int statCharisma, int abilityConcetration, int abilityAlchemy, string inventory, int gold)
-        {
-            throw new NotImplementedException();
-        }
 
         //wymaga wprowadzenia wszystkich zmiennych tożsamych z character. kolejnosc ma znaczenie. lepie zastąpić wzorem z NewCharacterViewModel wstzyknietym
         public void Add( string basicname, int basiclvl, string basicrace, string basicclass,
