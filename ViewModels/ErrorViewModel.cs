@@ -1,7 +1,8 @@
 using System;
 
-namespace SelfAplication.Models
+namespace SelfAplication.ViewModels
 {
+
     public class ErrorViewModel
     {
         public string RequestId { get; set; }
