@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SelfAplication.Models
 {
+    //podstawowa klasa, potem SelfAplicationContext podpiąć do DB (public DbSet<Spell>Spells + getset, potem EF + migracja danych/
     public class Spell
     {
         [Key]

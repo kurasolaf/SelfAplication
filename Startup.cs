@@ -27,6 +27,7 @@ namespace SelfAplication
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            //dodajemy tutaj po³¹czenie programu do bazy danych
             services.AddDbContext<SelfAplicationContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Default")));
             //³¹czymy services utworzonych obiektów tutaj z folderu services

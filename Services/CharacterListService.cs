@@ -8,19 +8,21 @@ using System.Threading.Tasks;
 // klasa bazowa/aplikacjakontks/ service
 namespace SelfAplication.Services
 {
+    
     public class CharacterListService
     {
+        //konstruktor poniższej klasy gdzie "_context" jest nazwą pola/zmiennej prywatnej
         private SelfAplicationContext _context;
 
-        //??
+        //wyciąganie _Context do użytku zewnętrznego poprzez użycie+/- wejscia zmiennej Context klasy SelfAplicationContext, tej wyżej)
         public CharacterListService(SelfAplicationContext context)
         {
-
+            //przypisalo zmienną context do zmiennej _context konstruktora na wstępie.
             _context = context;
 
         }
-
-
+        //zmienna 
+        // musze lepiej ogarnąć SERVICE i jak dobrze go pisać. kluczowe?
         // o co kaman, getallopen - pobiera wszystkie niezakonczone  characters (te ktore są instacją klasy character). logika biznesowa
         public CharacterListViewModel GetAllOpen()
         {
@@ -55,7 +57,7 @@ namespace SelfAplication.Services
              });
 
 
-        // czemu tworzy sie "o co kaman"
+        // czemu zwraca nowy obiekt klasy characterlistviewmodel i przypisalismy character.
             return new CharacterListViewModel
             {
                 Characters = characters

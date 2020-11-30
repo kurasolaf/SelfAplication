@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SelfAplication.Models
 {
-    //o co tu kaman? łączenie sie z bazą.
+    // łączenie sie z bazą. wtedy używamy opcji klass z DbContext/
     public class SelfAplicationContext : DbContext
     {
         public SelfAplicationContext([NotNullAttribute] DbContextOptions options) : base(options)
