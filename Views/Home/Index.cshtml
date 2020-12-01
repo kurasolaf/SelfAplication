@@ -1,18 +1,19 @@
 ﻿@model SelfAplication.ViewModels.CharacterListViewModel
 
-@foreach(var character in Model.Characters)
-{
+
+
 
 <div id="container">
     <div id="logo">
         <h3>Postać</h3>
     </div>
+    @foreach (var character in Model.Characters)
+    {
+        <div id="nav">
+            <h1>@character.BasicName LVL:@character.BasicLvl</h1>
+        </div>
+    <div id="content">
 
-     <div id="nav">
-        <h1>@character.BasicName LVL:@character.BasicLvl</h1>
-     </div>
-     <div id="content">
-        
         <p>POZIOM: @character.BasicLvl</p>
         <p>RASA:   @character.BasicRace</p>
         <p>KLASA:  @character.BasicClass</p>
@@ -43,11 +44,11 @@
         <p>ZŁOTO: @character.Gold</p>
         <a asp-controller="Home" asp-action="Finish" asp-route-id="@character.Id">Usuń postać</a>
     </div>
-
-    <div id="side"> COŚ PO PRAWEJ STRONIE </div>
-    <div id="footer"> COŚ NA DOLE STRONY-FOOTER </div>
+    }
+    
+    
 
 </div>
 
 
-}
+
