@@ -2,7 +2,9 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 
-
+/*
+    Tutaj musze ustalić wymiary containera ewentualnie responsywność pod tel - później
+*/
 #container{
     width: 1000px;
     margin-left:auto;
