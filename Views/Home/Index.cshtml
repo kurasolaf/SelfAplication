@@ -2,19 +2,7 @@
 
 
 
-
-<div id="container">
-
-    <div id="logo">
-        <h3>LOGO LOGO LOGO Postać</h3>
-    </div>
     
-    <div id="nav">
-            <h1> NAV NAV NAV NAV </h1>
-    </div>
-
-
-    <div id="content">
         <div id="char">
           @foreach (var character in Model.Characters)
            {
@@ -50,11 +38,10 @@
                     <a asp-controller="Home" asp-action="Finish" asp-route-id="@character.Id">Usuń postać</a>
            }
         </div>
-    </div>
+    
     
    
 
-</div>
 
 
 
